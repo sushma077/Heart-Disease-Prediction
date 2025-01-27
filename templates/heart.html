@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
+    
+    
+
+
+</head>
+<body>
+    <div class="gap"></div>
+    
+    <header>
+        <div class="nav-bar">
+            <div class="nav-items">
+                <h1>Heart Disease Prediction</h1>
+                <h2>Know your chances of having Heart Disease in just one click!</h2>
+
+
+            </div>
+            
+        </div>
+         
+    </header>
+
+    <main>
+        <div class="pic">
+            
+        </div>
+
+        <div class="form-container">
+            
+             <form action="{{url_for('predict')}}" method="post" class="frm">
+                <label for="ChestPain">Chest Pain type</label>
+                <br>
+                <select class="form-control" name = "ChestPain" required>
+                    <option value="0">--Select--</option>
+                    <option value="1">Typical Angina</option>
+                    <option value="2">Atypical Angina</option>
+                    <option value="3">Non-Anginal Pain</option>
+                    <option value="4">Asymptomatic</option>
+                  </select>
+                <br>
+                <br>
+
+
+                <label for="BloodPressure">Resting Blood Pressure (in mm Hg)</label>
+                <br>
+                <input type="number" name="BloodPressure" required>
+                <br>
+                <br>
+
+                <label for="SerumCholestoral">Serum Cholestoral in mg/dls</label>
+                <br>
+                <input type="number" name="SerumCholestoral" required>
+                <br>
+                <br>
+                
+
+                <label for="BloodSugar">Fasting Blood Sugar</label>
+                <br>
+                <select class="form-control"name = "BloodSugar" required>
+                    <option value="3">--Select--</option>
+                    <option value="0">Fasting Blood Sugar < 120 mg/dl</option>
+                    <option value="1">Fasting Blood Sugar > 120 mg/dl</option>
+                  </select>
+                <br>
+                <br>
+
+
+                <label for="ECG">Resting Electro-cardiographic Result</label>
+                <br>
+                <select name="ECG" required="required" >
+                    <option value="3">--Select--</option>
+                    <option value="0">Normal</option>
+                    <option value="1">having ST-T wave abnormality</option>
+                    <option value="2">showing probable or definite left ventricular hypertrophy</option>
+                    </select>
+                <br>
+                <br>
+                <label for="HeartRate">Maximum Heart Rate Achieved</label>
+                <br>
+                <input type="number" name="HeartRate" required>
+                <br>
+                <br>
+
+                <label for="Angina">Exercise Induced Angina</label>
+                <br>
+                <select name = "Angina" required="required" >
+                    <option value="2">--Select--</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                
+                <br>
+                <br>
+
+               
+                
+
+                <input type="submit" value="Predict" id="sub">
+                
+             </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="back">
+            <a href="health.html">Back to Home</a>
+            
+        </div>
+        <div class="back">
+            <h4>Made with ♥ by Sushma</h4>
+        </div>
+    </footer>
+
+</body>
+</html>
