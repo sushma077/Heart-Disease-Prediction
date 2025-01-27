@@ -6,7 +6,7 @@ import os
 
 app=Flask(__name__)
 
-classifier=pickle.load(open(r"C:\Users\khush\OneDrive\Documents\Desktop\ML_Projects\Heart-Disease-Prediction\heart_model_prediction.pkl","rb"))
+classifier=pickle.load(open(r"C:\Users\khush\OneDrive\Documents\Desktop\ML_Projects\heart_model_prediction.pkl","rb"))
 
 
 @app.route('/')
