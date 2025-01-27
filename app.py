@@ -6,8 +6,12 @@ import os
 
 app=Flask(__name__)
 
-classifier=pickle.load(open(r"C:\Users\khush\OneDrive\Documents\Desktop\GitDemo\heart_model_prediction.pkl","rb"))
 
+curr=os.path.dirname(__file__)
+model_path=os.path.join(curr, "heart_model_prediction.pkl")
+
+with open(model_path,"rb") as f:
+    classifier=pickle.load(f)
 
 @app.route('/')
 
